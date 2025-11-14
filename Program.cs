@@ -26,7 +26,7 @@
 
         Console.WriteLine("--- Estacionamento Simples ---\n");
 
-        // O operador '!' diz ao compilador para confiar que ReadLine() não será nulo.
+        
         Console.Write("Tamanho do veículo (P/G).....: ");
         tamanho = Console.ReadLine()!.Trim().Substring(0, 1).ToUpper();
 
@@ -37,7 +37,7 @@
         }
 
         Console.Write("Tempo de permanência (min)...: ");
-        // Garante que a conversão funcione e evita erros de formato
+        
         if (!int.TryParse(Console.ReadLine(), out tempoPermanencia) || tempoPermanencia <= 0 || tempoPermanencia > MaxTempoPermanencia)
         {
             Console.WriteLine("Tempo de permanência inválido.");
@@ -50,7 +50,7 @@
         Console.Write("Serviço de lavagem (S/N).....: ");
         lavagem = Console.ReadLine()!.Trim().Substring(0, 1).ToUpper() == "S";
 
-        // Lógica de cálculo (mesma do original)
+    
         if (tempoPermanencia >= TempoDiaria)
         {
             if (tamanho == "P")
